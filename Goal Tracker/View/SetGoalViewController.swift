@@ -15,24 +15,63 @@ class SetGoalViewController: UIViewController {
     @IBOutlet weak var exercisePickerView: UIPickerView!
     @IBOutlet weak var EducationPickerView: UIPickerView!
     @IBOutlet weak var FinancePickerView: UIPickerView!
+    @IBOutlet weak var exerciseTitleLabel: UILabel!
+    @IBOutlet weak var educationTitleLabel: UILabel!
+    @IBOutlet weak var financeTitleLabel: UILabel!
+    @IBOutlet weak var makeYourOwnTitleLabel: UILabel!
+    @IBOutlet weak var pickYourGoalLabel: UILabel!
+    @IBOutlet weak var setYourGoalwPicker: UILabel!
+    @IBOutlet weak var describeYourGoalwPicker: UILabel!
+    @IBOutlet weak var describeYourGoalNoPicker: UILabel!
+    @IBOutlet weak var setYourGoalNoPicker: UILabel!
+    @IBOutlet weak var describeYourGoalTextFieldNoPicker: UITextView!
+    @IBOutlet weak var setYourGoalTextFieldNoPicker: UITextField!
     
     var exercise = ExerciseData()
     var education = EducationData()
     var finance = FinanceData()
     
     override func viewDidLoad() {
-        exercisePickerView.delegate = exercise
-        EducationPickerView.delegate = education
-        FinancePickerView.delegate = finance
         super.viewDidLoad()
         //Setting border and color for both Text Boxes
         describeGoalTextView!.layer.borderWidth = 1
         describeGoalTextView!.layer.borderColor = UIColor.black.cgColor
         describeGoalTextView.layer.cornerRadius = 15
+        describeYourGoalTextFieldNoPicker!.layer.borderWidth = 1
+        describeYourGoalTextFieldNoPicker!.layer.borderColor = UIColor.black.cgColor
+        describeYourGoalTextFieldNoPicker.layer.cornerRadius = 15
         setYourGoalTextField!.layer.borderColor = UIColor.black.cgColor
         setYourGoalTextField!.layer.borderWidth = 1
-        setYourGoalTextField.layer.cornerRadius = 4
+        setYourGoalTextFieldNoPicker.layer.cornerRadius = 4
+        setYourGoalTextFieldNoPicker!.layer.borderColor = UIColor.black.cgColor
+        setYourGoalTextFieldNoPicker!.layer.borderWidth = 1
+        setYourGoalTextFieldNoPicker.layer.cornerRadius = 4
+        //
+        exercisePickerView.delegate = exercise
+        exercisePickerView.dataSource = exercise
+        EducationPickerView.delegate = education
+        EducationPickerView.dataSource = education
+        FinancePickerView.delegate = finance
+        FinancePickerView.dataSource = finance
+        updateView()
     }
+    
+    func updateView() {
+        financeTitleLabel.text = "Finance"
+        exerciseTitleLabel.text = "Exercise"
+        educationTitleLabel.text = "Education"
+        
+    }
+    
+    @IBAction func finishButtonTapped(_ sender: Any) {
+        guard let title = setYourGoalTextField.text, let descriptions = describeGoalTextView.text else {
+            return
+        }
+        GoalController.sharedController.addGoal(title1: title, descriptions1: descriptions)
+        
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
 
 class ExerciseData: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {

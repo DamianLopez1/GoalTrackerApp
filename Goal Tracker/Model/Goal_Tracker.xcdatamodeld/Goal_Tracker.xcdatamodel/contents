@@ -3,8 +3,9 @@
     <entity name="Goal" representedClassName="Goal" syncable="YES" codeGenerationType="class">
         <attribute name="descriptions" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="pickergoal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="pickergoal" inverseEntity="Goal"/>
     </entity>
     <elements>
-        <element name="Goal" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Goal" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

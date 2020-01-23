@@ -11,15 +11,23 @@ import CoreData
 
 class GoalsTableViewController: UITableViewController {
     
-     var addedContext: [NSManagedObject] = []
-
+    var goals: [Goal] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tempImageView = UIImageView(image: UIImage(named: "Background"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView
+        
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        goals = GoalController.sharedController.goals
+        tableView.reloadData()
+    }
+
     
     @IBAction func addButton(_ sender: Any) {
         
@@ -28,19 +36,12 @@ class GoalsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
            if editingStyle == .delete {
+               let goal = GoalController.sharedController.goals[indexPath.row]
+            GoalController.sharedController.deleteGoal(goal: goal)
                
-               guard let appDelegate =
-                   UIApplication.shared.delegate as? AppDelegate else {
-                       return
-               }
                
-               let managedContext =
-                   appDelegate.persistentContainer.viewContext
-               managedContext.delete(addedContext[indexPath.row])
-               addedContext.remove(at: indexPath.row)
                tableView.deleteRows(at: [indexPath], with: .fade)
-               
-               appDelegate.saveContext()
+           } else if editingStyle == .insert {
            }
        }
 
@@ -49,17 +50,30 @@ class GoalsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return goals.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? GoalTableViewCell else {
+            return UITableViewCell()
+        }
         cell.backgroundColor = UIColor.clear
-
+        let goal = goals[indexPath.row]
+        cell.goalTextLabel.text = goal.title
+        cell.descriptionTextLabel.text = goal.descriptions
         return cell
     }
 
 
 
 }
+
+class GoalTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var goalTextLabel: UILabel!
+    @IBOutlet weak var descriptionTextLabel: UILabel!
+    
+
+}
+

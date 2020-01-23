@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7412C92123D74B5000B52897 /* SelectGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7412C92023D74B5000B52897 /* SelectGoalViewController.swift */; };
 		7412C92323D74B9300B52897 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7412C92223D74B9300B52897 /* SetGoalViewController.swift */; };
+		74C02C8623D8A0F600B1656D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C02C8523D8A0F600B1656D /* Stack.swift */; };
+		74C02C8823D8A13C00B1656D /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C02C8723D8A13C00B1656D /* Goal.swift */; };
+		74C02C8A23D8A14800B1656D /* GoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C02C8923D8A14800B1656D /* GoalController.swift */; };
 		74C1263D23CE16150046AA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C1263C23CE16150046AA91 /* AppDelegate.swift */; };
 		74C1263F23CE16150046AA91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C1263E23CE16150046AA91 /* SceneDelegate.swift */; };
 		74C1264423CE16150046AA91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C1264223CE16150046AA91 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		7412C92023D74B5000B52897 /* SelectGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalViewController.swift; sourceTree = "<group>"; };
 		7412C92223D74B9300B52897 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
+		74C02C8523D8A0F600B1656D /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		74C02C8723D8A13C00B1656D /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		74C02C8923D8A14800B1656D /* GoalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalController.swift; sourceTree = "<group>"; };
 		74C1263923CE16150046AA91 /* Goal Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goal Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C1263C23CE16150046AA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74C1263E23CE16150046AA91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +78,6 @@
 				74C1263E23CE16150046AA91 /* SceneDelegate.swift */,
 				74C1264823CE16180046AA91 /* Assets.xcassets */,
 				74C1264D23CE16180046AA91 /* Info.plist */,
-				74C1264523CE16160046AA91 /* Goal_Tracker.xcdatamodeld */,
 			);
 			path = "Goal Tracker";
 			sourceTree = "<group>";
@@ -80,6 +85,10 @@
 		74C1265323D203930046AA91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74C1264523CE16160046AA91 /* Goal_Tracker.xcdatamodeld */,
+				74C02C8523D8A0F600B1656D /* Stack.swift */,
+				74C02C8723D8A13C00B1656D /* Goal.swift */,
+				74C02C8923D8A14800B1656D /* GoalController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,12 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C02C8A23D8A14800B1656D /* GoalController.swift in Sources */,
 				74C1263D23CE16150046AA91 /* AppDelegate.swift in Sources */,
 				74C1263F23CE16150046AA91 /* SceneDelegate.swift in Sources */,
 				74C1265823D20E8E0046AA91 /* GoalsTableViewController.swift in Sources */,
 				7412C92123D74B5000B52897 /* SelectGoalViewController.swift in Sources */,
+				74C02C8623D8A0F600B1656D /* Stack.swift in Sources */,
 				74C1264723CE16160046AA91 /* Goal_Tracker.xcdatamodeld in Sources */,
 				74C1265A23D21FDA0046AA91 /* QuoteViewController.swift in Sources */,
+				74C02C8823D8A13C00B1656D /* Goal.swift in Sources */,
 				7412C92323D74B9300B52897 /* SetGoalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

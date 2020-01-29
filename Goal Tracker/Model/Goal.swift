@@ -17,7 +17,7 @@ extension Goal {
            
            self.title = title
            self.descriptions = descriptions
-        self.goalpicker = goalpicker
+//        self.goalpicker = goalpicker
     
     }
 }

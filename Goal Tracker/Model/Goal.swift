@@ -11,13 +11,13 @@ import CoreData
 
 extension Goal {
     
-    convenience init?(title: String, descriptions: String, context: NSManagedObjectContext = Stack.context) {
+    convenience init?(title: String, descriptions: String, goalpicker: String, context: NSManagedObjectContext = Stack.context) {
            
            self.init(context: context)
            
            self.title = title
            self.descriptions = descriptions
-    
+        self.goalpicker = goalpicker
     
     }
 }

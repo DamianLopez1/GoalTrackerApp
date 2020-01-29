@@ -20,6 +20,9 @@
 		74C1264C23CE16180046AA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C1264A23CE16180046AA91 /* LaunchScreen.storyboard */; };
 		74C1265823D20E8E0046AA91 /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C1265723D20E8E0046AA91 /* GoalsTableViewController.swift */; };
 		74C1265A23D21FDA0046AA91 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C1265923D21FDA0046AA91 /* QuoteViewController.swift */; };
+		7F42259923E1EC5000B3348E /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42259823E1EC5000B3348E /* QuoteModel.swift */; };
+		7F54D5AE23DF329500668A68 /* Quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F54D5AD23DF329500668A68 /* Quotes.json */; };
+		7F8F205123DB3B920087B64C /* QuoteListFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F205023DB3B920087B64C /* QuoteListFileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		74C1264D23CE16180046AA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C1265723D20E8E0046AA91 /* GoalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
 		74C1265923D21FDA0046AA91 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		7F42259823E1EC5000B3348E /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		7F54D5AD23DF329500668A68 /* Quotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Quotes.json; path = ../Quotes.json; sourceTree = "<group>"; };
+		7F8F205023DB3B920087B64C /* QuoteListFileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteListFileController.swift; path = View/QuoteListFileController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 				74C02C8523D8A0F600B1656D /* Stack.swift */,
 				74C02C8723D8A13C00B1656D /* Goal.swift */,
 				74C02C8923D8A14800B1656D /* GoalController.swift */,
+				7F42259823E1EC5000B3348E /* QuoteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +103,8 @@
 		74C1265423D203AE0046AA91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7F8F205023DB3B920087B64C /* QuoteListFileController.swift */,
+				7F54D5AD23DF329500668A68 /* Quotes.json */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F54D5AE23DF329500668A68 /* Quotes.json in Resources */,
 				74C1264C23CE16180046AA91 /* LaunchScreen.storyboard in Resources */,
 				74C1264923CE16180046AA91 /* Assets.xcassets in Resources */,
 				74C1264423CE16150046AA91 /* Main.storyboard in Resources */,
@@ -197,9 +207,11 @@
 				74C1265823D20E8E0046AA91 /* GoalsTableViewController.swift in Sources */,
 				7412C92123D74B5000B52897 /* SelectGoalViewController.swift in Sources */,
 				74C02C8623D8A0F600B1656D /* Stack.swift in Sources */,
+				7F42259923E1EC5000B3348E /* QuoteModel.swift in Sources */,
 				74C1264723CE16160046AA91 /* Goal_Tracker.xcdatamodeld in Sources */,
 				74C1265A23D21FDA0046AA91 /* QuoteViewController.swift in Sources */,
 				74C02C8823D8A13C00B1656D /* Goal.swift in Sources */,
+				7F8F205123DB3B920087B64C /* QuoteListFileController.swift in Sources */,
 				7412C92323D74B9300B52897 /* SetGoalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

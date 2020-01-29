@@ -23,8 +23,8 @@ class GoalController {
                }
            }
            
-           func addGoal(title1: String, descriptions1: String) {
-               let _ = Goal(title: title1, descriptions: descriptions1)
+    func addGoal(title1: String, descriptions1: String, goalpicker1: String) {
+               let _ = Goal(title: title1, descriptions: descriptions1, goalpicker: goalpicker1)
                save()
                
            }

@@ -19,7 +19,6 @@ class GoalsTableViewController: UITableViewController {
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView
         
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,10 +26,23 @@ class GoalsTableViewController: UITableViewController {
         goals = GoalController.sharedController.goals
         tableView.reloadData()
     }
-
+    @IBAction func editButton(_ sender: Any) {
+        isEditing = !isEditing
+    }
+    
     
     @IBAction func addButton(_ sender: Any) {
         
+    }
+    
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let itemToMove = goals[sourceIndexPath.row]
+        goals.remove(at: sourceIndexPath.row)
+        goals.insert(itemToMove, at: destinationIndexPath.row)
     }
     
     
@@ -38,7 +50,7 @@ class GoalsTableViewController: UITableViewController {
            if editingStyle == .delete {
                let goal = GoalController.sharedController.goals[indexPath.row]
             GoalController.sharedController.deleteGoal(goal: goal)
-               
+            goals = GoalController.sharedController.goals
                
                tableView.deleteRows(at: [indexPath], with: .fade)
            } else if editingStyle == .insert {
@@ -58,6 +70,7 @@ class GoalsTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? GoalTableViewCell else {
             return UITableViewCell()
         }
+        
         cell.backgroundColor = UIColor.clear
         let goal = goals[indexPath.row]
         cell.goalTextLabel.text = goal.title

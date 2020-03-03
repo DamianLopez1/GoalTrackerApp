@@ -35,6 +35,29 @@ class GoalsTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var goal2 = String()
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let goalName = goals[indexPath.row]
+        goal2 = (goalName.value(forKey: "title") as? String)!
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let progressVC = storyboard.instantiateViewController(withIdentifier: "progressView") as! progressViewController
+        progressVC.goalName = goal2
+        self.present(progressVC, animated: true, completion: nil)
+        
+        
+        //get the goal using indexpath
+        //load the viewcontroller in memory that you want to present next
+        //pass the goal information to that viewcontroller
+        //present or push it on the stack or whatever you want to call that to the viewcontroller
+        
+    }
+
+    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }

@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5543C10F24056DBF009C1CC4 /* progressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543C10E24056DBF009C1CC4 /* progressViewController.swift */; };
-		5564C808240EA5EE0089D2E8 /* ProgressStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564C807240EA5EE0089D2E8 /* ProgressStack.swift */; };
-		5564C80A240EA64D0089D2E8 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564C809240EA64D0089D2E8 /* Progress.swift */; };
-		5564C80C240EA7190089D2E8 /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564C80B240EA7190089D2E8 /* ProgressController.swift */; };
 		7412C92123D74B5000B52897 /* SelectGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7412C92023D74B5000B52897 /* SelectGoalViewController.swift */; };
 		7412C92323D74B9300B52897 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7412C92223D74B9300B52897 /* SetGoalViewController.swift */; };
 		74C02C8623D8A0F600B1656D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C02C8523D8A0F600B1656D /* Stack.swift */; };
@@ -31,9 +28,6 @@
 
 /* Begin PBXFileReference section */
 		5543C10E24056DBF009C1CC4 /* progressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressViewController.swift; sourceTree = "<group>"; };
-		5564C807240EA5EE0089D2E8 /* ProgressStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStack.swift; sourceTree = "<group>"; };
-		5564C809240EA64D0089D2E8 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
-		5564C80B240EA7190089D2E8 /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
 		7412C92023D74B5000B52897 /* SelectGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalViewController.swift; sourceTree = "<group>"; };
 		7412C92223D74B9300B52897 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		74C02C8523D8A0F600B1656D /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -100,9 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				74C1264523CE16160046AA91 /* Goal_Tracker.xcdatamodeld */,
-				5564C807240EA5EE0089D2E8 /* ProgressStack.swift */,
-				5564C809240EA64D0089D2E8 /* Progress.swift */,
-				5564C80B240EA7190089D2E8 /* ProgressController.swift */,
 				74C02C8523D8A0F600B1656D /* Stack.swift */,
 				74C02C8723D8A13C00B1656D /* Goal.swift */,
 				74C02C8923D8A14800B1656D /* GoalController.swift */,
@@ -214,18 +205,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C02C8A23D8A14800B1656D /* GoalController.swift in Sources */,
-				5564C808240EA5EE0089D2E8 /* ProgressStack.swift in Sources */,
 				74C1263D23CE16150046AA91 /* AppDelegate.swift in Sources */,
 				74C1263F23CE16150046AA91 /* SceneDelegate.swift in Sources */,
 				5543C10F24056DBF009C1CC4 /* progressViewController.swift in Sources */,
 				74C1265823D20E8E0046AA91 /* GoalsTableViewController.swift in Sources */,
-				5564C80A240EA64D0089D2E8 /* Progress.swift in Sources */,
 				7412C92123D74B5000B52897 /* SelectGoalViewController.swift in Sources */,
 				74C02C8623D8A0F600B1656D /* Stack.swift in Sources */,
 				7F42259923E1EC5000B3348E /* QuoteModel.swift in Sources */,
 				74C1264723CE16160046AA91 /* Goal_Tracker.xcdatamodeld in Sources */,
 				74C1265A23D21FDA0046AA91 /* QuoteViewController.swift in Sources */,
-				5564C80C240EA7190089D2E8 /* ProgressController.swift in Sources */,
 				74C02C8823D8A13C00B1656D /* Goal.swift in Sources */,
 				7F8F205123DB3B920087B64C /* QuoteListFileController.swift in Sources */,
 				7412C92323D74B9300B52897 /* SetGoalViewController.swift in Sources */,

@@ -63,9 +63,9 @@ class progressViewController: UIViewController {
         } else if progressBar.progress >= 0.75 && progressBar.progress < 0.875 {
             treeImageView.image = UIImage(named: "Tree7")
         } else if progressBar.progress >= 0.875 && progressBar.progress < 1 {
-            treeImageView.image = UIImage(named: "medal")
-        } else {
             treeImageView.image = UIImage(named: "Tree8")
+        } else {
+            treeImageView.image = UIImage(named: "medal")
         }
     }
         
@@ -108,7 +108,6 @@ class progressViewController: UIViewController {
         
         
         
-    // Code
         
     }
     
